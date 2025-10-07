@@ -91,7 +91,7 @@ Console.WriteLine($"A conversão da temperatura em Fahreheit é {temperatura *9/
 #endregion
 
 #region questão2
-/*
+
     float a;
     double b, c, soma;
 
@@ -100,10 +100,11 @@ Console.WriteLine($"A conversão da temperatura em Fahreheit é {temperatura *9/
     Console.Write("Digite o segundo número: ");
     b = double.Parse(Console.ReadLine());
     
-    c =a;
+    c = a;
+
     soma = b + c;
-    Console.Write(soma);
-*/
+    Console.Write($"{soma}");
+
 #endregion
 
 #region questão3
@@ -119,27 +120,31 @@ Console.WriteLine($"A conversão da temperatura em Fahreheit é {temperatura *9/
 
 #region questão4
 /*
-string nome;
+    string nome;
 
-Console.Write("Nome: ");
-nome = Console.ReadLine()!;
+    Console.Write("Nome: ");
+    nome = Console.ReadLine()!;
 
-Console.Write($"Olá {nome}, seja bem-vindo!.");
+    Console.Write($"Olá {nome}, seja bem-vindo!.");
 */
 #endregion
 
 #region questão5
 /*
     decimal a, b, c;
+
     string formatado;
+
     Console.Write("Digite o primeiro número: ");
     a = decimal.Parse(Console.ReadLine());
     Console.Write("Digite o segundo número: ");
     b = decimal.Parse(Console.ReadLine());
 
     c = a * b;
+
     formatado = c.ToString("F2");
     Console.Write($"{formatado}");
+
     */
 #endregion
 
@@ -166,8 +171,8 @@ Console.Write($"{a*a}");
 
 #region questão8
 /*
-float a;
-Console.Write("Digite um número: ");
+    float a;
+    Console.Write("Digite um número: ");
     a = float.Parse(Console.ReadLine());
 
     Console.Write(a-10.5f);
@@ -176,10 +181,10 @@ Console.Write("Digite um número: ");
 
 #region questão9
 /*
-string nome;
-int idade;
+    string nome;
+    int idade;
 
-Console.Write("Digite o nome ");
+    Console.Write("Digite o nome ");
     nome = Console.ReadLine()!;
     Console.Write("Digite a idade ");
     idade = int.Parse(Console.ReadLine());
@@ -190,20 +195,20 @@ Console.Write("Digite o nome ");
 
 #region questão10
 /*
-int a=10;
-char b='a';
-string c = "nome";    
+    int a=10;
+    char b='a';
+    string c = "nome";    
 
-Console.WriteLine($"{a}, {b}, {c}");
+    Console.WriteLine($"{a}, {b}, {c}");
 */
 #endregion
 
 #region questão11
 /*
 
-double a, b, c;
+    double a, b, c;
 
-Console.Write("Digite o primeiro número: ");
+    Console.Write("Digite o primeiro número: ");
     a = double.Parse(Console.ReadLine());
     Console.Write("Digite o segundo número: ");
     b = double.Parse(Console.ReadLine());
@@ -215,12 +220,12 @@ Console.Write("Digite o primeiro número: ");
 #endregion
 
 #region questão12
+/*
+    float C;
 
-float C;
-
-Console.Write("Digite a temperatura ");
+    Console.Write("Digite a temperatura ");
     C = float.Parse(Console.ReadLine());
 
     Console.Write($"A temperatura em Fahrenheit é {C * 9f/5f + 32f} ");
-    
+*/
 #endregion
