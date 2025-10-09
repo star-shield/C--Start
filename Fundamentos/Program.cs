@@ -91,9 +91,9 @@ Console.WriteLine($"A conversão da temperatura em Fahreheit é {temperatura *9/
 #endregion
 
 #region questão2
-
+/*
     float a;
-    double b, c, soma;
+    double b, c;
 
     Console.Write("Digite o primeiro número: ");
     a = float.Parse(Console.ReadLine());
@@ -102,19 +102,18 @@ Console.WriteLine($"A conversão da temperatura em Fahreheit é {temperatura *9/
     
     c = a;
 
-    soma = b + c;
-    Console.Write($"{soma}");
-
+    Console.Write($"{b + c}");
+*/
 #endregion
 
 #region questão3
 /*
     char a;
     
-    Console.WriteLine("Digite o caracter: ");
+    Console.Write("Digite o caracter: ");
     a = Console.ReadKey().KeyChar;
 
-    Console.WriteLine(a);
+    Console.WriteLine($"\n O caracter digitado é {a}");
     */
 #endregion
 
@@ -131,21 +130,16 @@ Console.WriteLine($"A conversão da temperatura em Fahreheit é {temperatura *9/
 
 #region questão5
 /*
-    decimal a, b, c;
-
-    string formatado;
+    decimal a, b;
 
     Console.Write("Digite o primeiro número: ");
     a = decimal.Parse(Console.ReadLine());
     Console.Write("Digite o segundo número: ");
     b = decimal.Parse(Console.ReadLine());
 
-    c = a * b;
 
-    formatado = c.ToString("F2");
-    Console.Write($"{formatado}");
-
-    */
+    Console.Write($"{a*b:F2}");
+*/
 #endregion
 
 #region questão6
