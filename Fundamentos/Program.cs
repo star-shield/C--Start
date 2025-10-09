@@ -24,7 +24,7 @@ Console.WriteLine($"Seu nome é {nome} e sua idade é {idade}");
 #endregion
 
 #region exercicio1
-
+/*
 string nome;
 int idade;
 
@@ -34,11 +34,11 @@ Console.Write("Digite sua idade: ");
 idade = int.Parse(Console.ReadLine()!);
 
 Console.Write($"Seu nome é {nome} e você tem {idade} anos");
-
+*/
 #endregion
 
 #region exercicio2
-
+/*
 int a, b;
 
     Console.Write("Digite o primeiro número: ");
@@ -50,28 +50,28 @@ int a, b;
     Console.WriteLine($"O resultado da subtração dos algarismos é: {a-b}");
     Console.WriteLine($"O resultado da multiplicação dos algarismos é: {a*b}");
     Console.WriteLine($"O resultado da divisão dos algarismos é: {a/b}");
-    
+    */
 #endregion
 
 #region exercicio3
-    
-    int raio;
-    const double pi = 3.14;
+/*
+int raio;
+const double pi = 3.14;
 
-    Console.Write("Digite o valor do raio: ");
-    raio = int.Parse(Console.ReadLine()!);
+Console.Write("Digite o valor do raio: ");
+raio = int.Parse(Console.ReadLine()!);
 
-    Console.WriteLine($"O resultado da área é {pi * (raio*raio)} e o perímetro é {2*pi*raio}");
-    
+Console.WriteLine($"O resultado da área é {pi * (raio*raio)} e o perímetro é {2*pi*raio}");
+*/
 #endregion
 
 #region exercicio4
-
+/*
     int temperatura;
 
     Console.Write("Digite a temperatura: ");
     temperatura = int.Parse(Console.ReadLine()!);
 
     Console.WriteLine($"A conversão da temperatura em Fahreheit é {temperatura *9/5+32}");
-    
+    */
 #endregion
