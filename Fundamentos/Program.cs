@@ -67,14 +67,13 @@ Console.WriteLine($"O resultado da área é {pi * (raio*raio)} e o perímetro é
 
 #region exercicio4✅
 /*
-
-int temperatura;
+    int temperatura;
 
 Console.Write("Digite a temperatura: ");
 temperatura = int.Parse(Console.ReadLine()!);
 
-Console.WriteLine($"A conversão da temperatura em Fahreheit é {temperatura *9/5+32}");
-*/
+    Console.WriteLine($"A conversão da temperatura em Fahreheit é {temperatura *9/5+32}");
+    */
 #endregion
 
 #region questão1✅
@@ -221,4 +220,12 @@ Console.Write($"{a*a}");
 
     Console.Write($"A temperatura em Fahrenheit é {C * 9f/5f + 32f} ");
 */
+#endregion
+
+#region raiz
+double valorRaiz, raiz;
+valorRaiz = double.Parse(Console.ReadLine()!);
+
+raiz = Math.Pow(valorRaiz, 0.5);
+Console.Write($"{raiz:F1}");
 #endregion
