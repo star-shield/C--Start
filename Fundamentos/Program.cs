@@ -23,7 +23,7 @@ Console.WriteLine($"Seu nome é {nome} e sua idade é {idade}");
 
 #endregion
 
-#region exercicio1
+#region exercicio1✅
 /*
 string nome;
 int idade;
@@ -37,7 +37,7 @@ Console.Write($"Seu nome é {nome} e você tem {idade} anos");
 */
 #endregion
 
-#region exercicio2
+#region exercicio2✅
 /*
 int a, b;
 
@@ -53,7 +53,7 @@ int a, b;
     */
 #endregion
 
-#region exercicio3
+#region exercicio3✅
 /*
 int raio;
 const double pi = 3.14;
@@ -65,7 +65,7 @@ Console.WriteLine($"O resultado da área é {pi * (raio*raio)} e o perímetro é
 */
 #endregion
 
-#region exercicio4
+#region exercicio4✅
 /*
 
 int temperatura;
@@ -77,7 +77,7 @@ Console.WriteLine($"A conversão da temperatura em Fahreheit é {temperatura *9/
 */
 #endregion
 
-#region questão1
+#region questão1✅
 /*
     int a, b;
 
@@ -90,7 +90,7 @@ Console.WriteLine($"A conversão da temperatura em Fahreheit é {temperatura *9/
 */
 #endregion
 
-#region questão2
+#region questão2✅
 /*
     float a;
     double b, c;
@@ -106,7 +106,7 @@ Console.WriteLine($"A conversão da temperatura em Fahreheit é {temperatura *9/
 */
 #endregion
 
-#region questão3
+#region questão3✅
 /*
     char a;
     
@@ -117,7 +117,7 @@ Console.WriteLine($"A conversão da temperatura em Fahreheit é {temperatura *9/
     */
 #endregion
 
-#region questão4
+#region questão4✅
 /*
     string nome;
 
@@ -128,7 +128,7 @@ Console.WriteLine($"A conversão da temperatura em Fahreheit é {temperatura *9/
 */
 #endregion
 
-#region questão5
+#region questão5✅
 /*
     decimal a, b;
 
@@ -137,12 +137,11 @@ Console.WriteLine($"A conversão da temperatura em Fahreheit é {temperatura *9/
     Console.Write("Digite o segundo número: ");
     b = decimal.Parse(Console.ReadLine());
 
-
     Console.Write($"{a*b:F2}");
 */
 #endregion
 
-#region questão6
+#region questão6✅
 /*
 int a = 30;
 
@@ -150,7 +149,7 @@ Console.Write($"{a*a}");
 */
 #endregion
 
-#region questão7
+#region questão7✅
 /*
     double a, b;
 
@@ -163,7 +162,7 @@ Console.Write($"{a*a}");
 */
 #endregion
 
-#region questão8
+#region questão8✅
 /*
     float a;
     Console.Write("Digite um número: ");
@@ -173,7 +172,7 @@ Console.Write($"{a*a}");
     */
 #endregion
 
-#region questão9
+#region questão9✅
 /*
     string nome;
     int idade;
@@ -187,7 +186,7 @@ Console.Write($"{a*a}");
     */
 #endregion
 
-#region questão10
+#region questão10✅
 /*
     int a=10;
     char b='a';
@@ -197,7 +196,7 @@ Console.Write($"{a*a}");
 */
 #endregion
 
-#region questão11
+#region questão11✅
 /*
 
     double a, b, c;
@@ -213,7 +212,7 @@ Console.Write($"{a*a}");
 */
 #endregion
 
-#region questão12
+#region questão12✅
 /*
     float C;
 
