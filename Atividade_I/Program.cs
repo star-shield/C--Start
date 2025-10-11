@@ -100,16 +100,34 @@ Console.Write($"{real + imposto} ");
 #endregion
 
 #region questão8
-int s,m,h;
 
-Console.Write("Digite os segundos: ");
-s = int.Parse(Console.ReadLine()!);
-h = s / 3600;
-m = (s%3600)/60;
-s = m / 30;
-Console.Write($"{h} horas, {m} minutos e {s} segundos ");
+// int s,m,h;
+
+// Console.Write("Digite os segundos: ");
+// s = int.Parse(Console.ReadLine()!);
+// h = s / 3600;
+// m = (s%3600)/60;
+// s = s % 60;
+// Console.Write($"{h} horas, {m} minutos e {s} segundos ");
 #endregion
 
 #region questão9
-    
+// double a, b;
+
+// Console.Write("Digite o valor de A: ");
+// a = double.Parse(Console.ReadLine()!);
+// Console.Write("Digite o valor de B: ");
+// b = double.Parse(Console.ReadLine()!);
+
+// Console.Write($"A hipotenusa é: {Math.Sqrt(a*a+b*b)}");
+#endregion
+
+#region questão10
+float distancia, tempo;
+Console.Write("Digite a distância em Km: ");
+distancia = float.Parse(Console.ReadLine()!);
+Console.Write("Digite o tempo em segundos: ");
+tempo = float.Parse(Console.ReadLine()!);
+
+Console.Write($"A velocidade média é: {(distancia/1000)/(tempo/3600):F2} Km/h");
 #endregion
