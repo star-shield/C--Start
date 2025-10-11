@@ -2,6 +2,7 @@
 #region questão1
 
 using System.Globalization;
+using System.Security.Cryptography;
 /*
 double a, b, c, area, p;
 
@@ -104,8 +105,9 @@ int s,m,h;
 Console.Write("Digite os segundos: ");
 s = int.Parse(Console.ReadLine()!);
 h = s / 3600;
-
-Console.Write($"{} horas, {} minutos e {} segundos ");
+m = (s%3600)/60;
+s = m / 30;
+Console.Write($"{h} horas, {m} minutos e {s} segundos ");
 #endregion
 
 #region questão9
