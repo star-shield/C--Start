@@ -9,32 +9,32 @@ b = int.Parse(Console.ReadLine()!);
 Console.Write("Digite o terceiro número: ");
 c = int.Parse(Console.ReadLine()!);
 
-if (a > b && b < c)
+if (a > b && b < c && c > a)
 {
-    maior = a;
+    maior = c;
     menor = b;
 
 }
-else if (a > c && c < b)
+else if (a > c && c < b && b > a)
+{
+    maior = b;
+    menor = c;
+
+}else if (b > a && a < c && c > b)
+{
+    maior = c;
+    menor = a;
+}else if (b > c && c < a && a > b)
 {
     maior = a;
     menor = c;
-
-}else if (b > a && a < c )
+}else if (c > a && a < b && b > c)
 {
     maior = b;
     menor = a;
-}else if (b > c && c < a)
+}else if (c > b && b < a && a > c)
 {
-    maior = b;
-    menor = c;
-}else if (c > a && a < b)
-{
-    maior = c;
-    menor = a;
-}else if (c > b && b < a)
-{
-    maior = c;
+    maior = a;
     menor = b;
 }
 Console.Write($"O maior é: {maior} e o menor é: {menor}");

@@ -123,11 +123,88 @@ Console.Write($"{real + imposto} ");
 #endregion
 
 #region questão10
-float distancia, tempo;
-Console.Write("Digite a distância em Km: ");
-distancia = float.Parse(Console.ReadLine()!);
-Console.Write("Digite o tempo em segundos: ");
-tempo = float.Parse(Console.ReadLine()!);
+// float distancia, tempo;
+// Console.Write("Digite a distância em Km: ");
+// distancia = float.Parse(Console.ReadLine()!);
+// Console.Write("Digite o tempo em segundos: ");
+// tempo = float.Parse(Console.ReadLine()!);
 
-Console.Write($"A velocidade média é: {(distancia/1000)/(tempo/3600):F2} Km/h");
+// Console.Write($"A velocidade média é: {(distancia/1000)/(tempo/3600):F2} Km/h");
+#endregion
+
+#region atividade if/else
+
+// int a;
+
+// Console.Write("Digite um número inteiro: ");
+// a = int.Parse(Console.ReadLine()!);
+// if (a % 2 == 0)
+// {
+//     Console.WriteLine("O número é par");
+// }
+// else if (a % 2 != 0)
+// {
+//     Console.WriteLine("O número é ímpar");
+// }else
+// {
+//     Console.WriteLine("Zero");
+// }
+
+// double nota;
+
+// Console.Write("Digite a nota do aluno: ");
+// nota = double.Parse(Console.ReadLine()!);
+
+// if(nota >= 7)
+// {
+//     Console.WriteLine("Aprovado");
+// }
+// else
+// {
+//     Console.WriteLine("Reprovado");
+// }
+#endregion
+
+#region atividade com switch
+
+// int a;
+// Console.Write("Digite um número de 1 a 7: ");
+// a = int.Parse(Console.ReadLine()!);
+
+// switch (a)
+// {
+//     case 1: Console.Write("domingo"); break;
+//     case 2: Console.Write("segunda"); break;
+//     case 3: Console.Write("terça"); break;
+//     case 4: Console.Write("quarta"); break;
+//     case 5: Console.Write("quinta"); break;
+//     case 6: Console.Write("sexta"); break;
+//     case 7: Console.Write("sábado"); break;
+//     default: Console.Write("valor iválido"); break;
+// }
+
+// char a;
+// string b;
+// Console.Write("Informação de combustível");
+// Console.Write("A) G) D)");
+// a = Console.ReadKey().KeyChar;
+
+// switch (b=a.ToString().ToUpper())
+// {
+//     case "A": Console.Write("Alcool"); break;
+//     case "G": Console.Write("Gasolina"); break;
+//     case "D": Console.Write("Diesel"); break;
+//     default: Console.Write("valor inválido"); break;
+// }
+#endregion
+
+#region atividade valor ternário
+
+// int a;
+
+// Console.Write("digite um número ");
+// a = int.Parse(Console.ReadLine()!);
+
+// string menssagi = a % 2 == 0 ? "par" : "impar";
+// Console.Write(menssagi);
 #endregion
