@@ -208,3 +208,76 @@ Console.Write($"{real + imposto} ");
 // string menssagi = a % 2 == 0 ? "par" : "impar";
 // Console.Write(menssagi);
 #endregion
+
+#region estruturas de repetição for
+//DESAFIO 1
+// int numero;
+
+// Console.Write("Digite um número: ");
+// numero = int.Parse(Console.ReadLine()!);
+
+// for (int i = 1; i <=10; i++)
+// {
+
+//     Console.WriteLine($"{numero} x {i} = {numero * i}");
+// }
+
+// DESAFIO 2
+
+// int numero;
+
+// Console.Write("Digite um número de 1 a 100: ");
+// numero = int.Parse(Console.ReadLine()!);
+
+// for (int i=0; i<=numero; i++)
+// {
+//     Console.WriteLine(i);
+// }
+
+//DESAFIO 3
+
+// int numero, multi;
+
+// Console.Write("Digite um número: ");
+// numero = int.Parse(Console.ReadLine()!);
+// Console.Write("Digite o multiplicador: ");
+// multi = int.Parse(Console.ReadLine()!);
+
+// for (int i = 0; i <= numero; i = i + multi)
+// {
+//     Console.WriteLine(i);
+// }
+#endregion
+
+#region estrutura de repetição while
+
+//DESAFIO
+
+Console.WriteLine("JOGADOR DESAFIANTE");
+Console.WriteLine("Informe um número de 0 a 9");
+int numero = int.Parse(Console.ReadLine());
+
+while (numero > 9)
+{
+    Console.WriteLine("Número digitado é maior que 9, tente novamente ");
+     numero = int.Parse(Console.ReadLine());
+}
+Console.Clear();
+
+Console.WriteLine("JOGADOR DESAFIADO");
+Console.WriteLine("Tente descobrir o número de 0 a 9");
+int valor = int.Parse(Console.ReadLine());
+
+while (valor > 9)
+{
+    Console.WriteLine("Número digitado é maior que 9, tente novamente ");
+    valor = int.Parse(Console.ReadLine());
+}
+while (valor != numero)
+{
+    Console.WriteLine("Você ERROU! Tente novamente!");
+    valor = int.Parse(Console.ReadLine());
+
+}
+    Console.WriteLine("PARADCNS, VOCE ACERTOU!");
+#endregion
