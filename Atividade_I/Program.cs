@@ -208,3 +208,156 @@ Console.Write($"{real + imposto} ");
 // string menssagi = a % 2 == 0 ? "par" : "impar";
 // Console.Write(menssagi);
 #endregion
+
+#region estruturas de repetição for
+//DESAFIO 1
+// int numero;
+
+// Console.Write("Digite um número: ");
+// numero = int.Parse(Console.ReadLine()!);
+
+// for (int i = 1; i <=10; i++)
+// {
+
+//     Console.WriteLine($"{numero} x {i} = {numero * i}");
+// }
+
+// DESAFIO 2
+
+// int numero;
+
+// Console.Write("Digite um número de 1 a 100: ");
+// numero = int.Parse(Console.ReadLine()!);
+
+// for (int i=0; i<=numero; i++)
+// {
+//     Console.WriteLine(i);
+// }
+
+//DESAFIO 3
+
+// int numero, multi;
+
+// Console.Write("Digite um número: ");
+// numero = int.Parse(Console.ReadLine()!);
+// Console.Write("Digite o multiplicador: ");
+// multi = int.Parse(Console.ReadLine()!);
+
+// for (int i = 0; i <= numero; i = i + multi)
+// {
+//     Console.WriteLine(i);
+// }
+#endregion
+
+#region estrutura de repetição while
+
+//DESAFIO
+
+// Console.WriteLine("JOGADOR DESAFIANTE");
+// Console.WriteLine("Informe um número de 0 a 9");
+// int numero = int.Parse(Console.ReadLine());
+
+// while (numero > 9)
+// {
+//     Console.WriteLine("Número digitado é maior que 9, tente novamente ");
+//      numero = int.Parse(Console.ReadLine());
+// }
+// Console.Clear();
+
+// Console.WriteLine("JOGADOR DESAFIADO");
+// Console.WriteLine("Tente descobrir o número de 0 a 9");
+// int valor = int.Parse(Console.ReadLine());
+
+// while (valor > 9)
+// {
+//     Console.WriteLine("Número digitado é maior que 9, tente novamente ");
+//     valor = int.Parse(Console.ReadLine());
+// }
+// while (valor != numero)
+// {
+//     Console.WriteLine("Você ERROU! Tente novamente!");
+//     valor = int.Parse(Console.ReadLine());
+
+// }
+//     Console.WriteLine("PARADCNS, VOCE ACERTOU!");
+#endregion
+
+#region fibonacci
+
+// int a = 0, b = 1, soma = 0, prox = 0;
+
+// for(int i = 0; i <=12; i++)
+// {
+//     prox = b;
+//     soma = a + b;
+//     a = b;
+//     b = soma;
+
+//     Console.WriteLine($"{prox}");
+// }
+#endregion
+
+#region fatorial
+
+// int n, f=1;
+// Console.Write("Digite um número: ");
+// n = int.Parse(Console.ReadLine()!);
+
+// for (int i = 1; i <= n; i++)
+// {
+//     f *= i;
+
+// }
+// Console.WriteLine($"{f}");
+#endregion
+
+#region sequência de pontencias
+
+// int n, f=1;
+// Console.Write("Digite um número: ");
+// n = int.Parse(Console.ReadLine()!);
+
+// for (int i = 0; i <= n; i++)
+// {
+//     Console.WriteLine($"{f}");
+//     f *= 2;
+
+// }
+#endregion
+
+#region número quadrado inteiro
+    
+// int n, f=1, a = 1;
+// Console.Write("Digite um número: ");
+// n = int.Parse(Console.ReadLine()!);
+
+// for (int i = 1; i <= n; i++)
+// {
+   
+//     f = 1 * i;
+//     a = f * f;
+
+//     Console.Write($"{a}, ");
+// }
+#endregion
+
+#region sequência de tribonacci
+    
+int n, soma = 0, a =0, b = 0, c =1, prox = 0;
+Console.Write("Digite um número: ");
+n = int.Parse(Console.ReadLine()!);
+
+Console.Write($"0, ");
+
+for (int i = 1; i <= n; i++)
+{
+
+    Console.Write($"{prox}, ");
+    prox = c;
+    soma = a + b + c;
+    a = b;
+    b = c;
+    c = soma;
+
+}
+#endregion

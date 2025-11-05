@@ -223,11 +223,11 @@ Console.Write($"{a*a}");
 #endregion
 
 #region raiz✅
-/*
+
 double valorRaiz, raiz;
 valorRaiz = double.Parse(Console.ReadLine()!);
 
 raiz = Math.Pow(valorRaiz, 0.5);
 Console.Write($"{raiz:F1}");
-*/
+
 #endregion
