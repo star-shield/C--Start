@@ -1,43 +1,43 @@
 ﻿#region questão 1
 
-// int a, b, c, maior = 0, menor = 0;
+int a, b, c, maior = 0, menor = 0;
 
-// Console.Write("Digite o primeiro número: ");
-// a = int.Parse(Console.ReadLine()!);
-// Console.Write("Digite o segundo número: ");
-// b = int.Parse(Console.ReadLine()!);
-// Console.Write("Digite o terceiro número: ");
-// c = int.Parse(Console.ReadLine()!);
+Console.Write("Digite o primeiro número: ");
+a = int.Parse(Console.ReadLine()!);
+Console.Write("Digite o segundo número: ");
+b = int.Parse(Console.ReadLine()!);
+Console.Write("Digite o terceiro número: ");
+c = int.Parse(Console.ReadLine()!);
 
-// if (a > b && b < c && c > a)
-// {
-//     maior = c;
-//     menor = b;
+if (a > b && b < c && c > a)
+{
+    maior = c;
+    menor = b;
 
-// }
-// else if (a > c && c < b && b > a)
-// {
-//     maior = b;
-//     menor = c;
+}
+else if (a > c && c < b && b > a)
+{
+    maior = b;
+    menor = c;
 
-// }else if (b > a && a < c && c > b)
-// {
-//     maior = c;
-//     menor = a;
-// }else if (b > c && c < a && a > b)
-// {
-//     maior = a;
-//     menor = c;
-// }else if (c > a && a < b && b > c)
-// {
-//     maior = b;
-//     menor = a;
-// }else if (c > b && b < a && a > c)
-// {
-//     maior = a;
-//     menor = b;
-// }
-// Console.Write($"O maior é: {maior} e o menor é: {menor}");
+}else if (b > a && a < c && c > b)
+{
+    maior = c;
+    menor = a;
+}else if (b > c && c < a && a > b)
+{
+    maior = a;
+    menor = c;
+}else if (c > a && a < b && b > c)
+{
+    maior = b;
+    menor = a;
+}else if (c > b && b < a && a > c)
+{
+    maior = a;
+    menor = b;
+}
+Console.Write($"O maior é: {maior} e o menor é: {menor}");
 #endregion
 
 #region questão 2
@@ -203,12 +203,12 @@
 
 #region questão 10
 
-int a;
+// int a;
 
-Console.Write("Digite um número de 1 a 7: ");
-a = int.Parse(Console.ReadLine()!);
+// Console.Write("Digite um número de 1 a 7: ");
+// a = int.Parse(Console.ReadLine()!);
 
-string msg = a >= 2 && a <= 6 ? "Dia útil" : a == 1 || a == 7 ? "Fim de semana" : "Não corresponde o dia da semana";
+// string msg = a >= 2 && a <= 6 ? "Dia útil" : a == 1 || a == 7 ? "Fim de semana" : "Não corresponde o dia da semana";
 
-Console.Write(msg);
+// Console.Write(msg);
 #endregion

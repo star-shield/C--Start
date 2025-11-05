@@ -55,7 +55,7 @@
 
 #endregion
 
-#region atividade operador ternério
+#region atividade operador ternário
 
 
 // int numero;
