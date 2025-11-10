@@ -40,19 +40,31 @@
 
 #region questão 5
 
-
+using System.Security.Cryptography.X509Certificates;
+int[] numeros = new int[5];
+int soma=0;
+for (int i = 0; i < 5; i++)
+{
+    Console.Write("Digite o número: ");
+    numeros[i] = int.Parse(Console.ReadLine()!);
+}
+foreach (var numero in numeros)
+{
+    soma += numero;
+}
+Console.Write($"A média dos números é: {soma / 5}");
 
 #endregion
 #region questão 6
 
-int numero;
+// int numero;
 
-Console.Write("Entre com um número positivo: ");
-numero = int.Parse(Console.ReadLine()!);
-do
-{
-    Console.WriteLine(numero);
-    numero --;
-} while (numero > -1);
+// Console.Write("Entre com um número positivo: ");
+// numero = int.Parse(Console.ReadLine()!);
+// do
+// {
+//     Console.WriteLine(numero);
+//     numero --;
+// } while (numero > -1);
 
 #endregion
