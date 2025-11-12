@@ -19,14 +19,15 @@
 
 #region questão2
 
-// int numero = 0;
+// int numero = 0, soma=0;
 // do
 // {
 //     Console.Write("Digite um número:");
 //     numero = int.Parse(Console.ReadLine()!);
+//     soma += numero;
 // } while (numero != 0);
-// numero++;
-// Console.WriteLine($"A soma dos números é: {numero}");
+
+// Console.WriteLine($"A soma dos números é: {soma}");
 #endregion
 
 #region questão3
@@ -44,18 +45,21 @@
 #endregion
 
 #region questão 4
-// Console.Write("Digite uma frase: ");
-// string[] palavras = Console.ReadLine().Split(' ');
 
-// foreach (string palavra in palavras)
+// string[] frase = Console.ReadLine()!.Split(' ');
+// int contador = 0;
+// foreach (var palavra in frase)
 // {
-
+//     for (int i = 0; i < palavra.Length; i++)
+//     {
+//         char letra = palavra[i];
+//         if (letra == 'a' || letra == 'e' || letra == 'i' || letra == 'o' || letra == 'u')
+//             contador++;
+//     }
 // }
-
-
+// Console.WriteLine($"A frase tem {contador} vogais");
 #endregion
 #region questão5
-
 int numero, auxiliar = 1, asteristico =1;
 
 Console.Write("Digite com um número positivo: ");
@@ -63,14 +67,19 @@ numero = int.Parse(Console.ReadLine()!);
 
 for (int i= 0; i < numero; i++)
 {
-    for (int j = 0; j <= asteristico; j++)
+    int espaco = numero - i;
+    while (espaco > 0)
+    {
+        Console.Write(" ");
+        espaco--;
+    }
+    for (int j = 0; j < asteristico; j++)
     {
         Console.Write("*");
     }
-    Console.WriteLine("");
+    Console.WriteLine();
     auxiliar++;
-    asteristico = auxiliar + i;   
+    asteristico = auxiliar + i+1;   
+
 }
-
-
 #endregion
