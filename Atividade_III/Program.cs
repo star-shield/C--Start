@@ -46,17 +46,17 @@
 
 #region questão 4
 
-string[] frase = Console.ReadLine()!.Split(' ');
-int contador = 0;
-foreach (var palavra in frase)
-{
-    for (int i = 0; i < palavra.Length; i++)
-    {
-        char letra = char.ToLower(palavra[i]);
-        if (letra == 'a' || letra == 'e' || letra == 'i' || letra == 'o' || letra == 'u')
-            contador++;
-    }
-}
+// string[] frase = Console.ReadLine()!.Split(' ');
+// int contador = 0;
+// foreach (var palavra in frase)
+// {
+//     for (int i = 0; i < palavra.Length; i++)
+//     {
+//         char letra = char.ToLower(palavra[i]);
+//         if (letra == 'a' || letra == 'e' || letra == 'i' || letra == 'o' || letra == 'u')
+//             contador++;
+//     }
+// }
 Console.WriteLine($"A frase tem {contador} vogais");
 #endregion
 #region questão5
