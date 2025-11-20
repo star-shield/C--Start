@@ -211,8 +211,36 @@
 #endregion
 
 #region questão9
+// int ValorMax(int[] numbers)
+// {
+//     int maior = 0;
+//     for(int i = 0; i < numbers.Length; i++)
+//     {
+//         if(numbers[i] > maior)
+//             maior = numbers[i];
+//     }
+//     return maior;
+// }
+// int[] numeros = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
 
-int[] numeros = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
+// Console.WriteLine(ValorMax(numeros));
+#endregion
 
+#region questão 10
+int ContadorDeCaracter(string p, char l)
+{
+    int contador = 0;
+    for(int i = 0; i < p.Length; i++)
+    {
+        if(p[i] == l)
+            contador++;
+    }
+    return contador;
+}
+Console.Write("Digite uma palavra: ");
+string palavra = Console.ReadLine()!;
+Console.Write("Digite a letra que deseja contar: ");
+char letra = char.Parse(Console.ReadLine()!);
 
+Console.WriteLine($"A letra '{letra}' aparece {ContadorDeCaracter(palavra, letra)} vez(es) na palavra");
 #endregion
