@@ -378,3 +378,138 @@
 // }
     
 #endregion
+
+#region media3🌟
+
+// double[] notas = Array.ConvertAll(Console.ReadLine().Split(' '), double.Parse);
+// double n1 = notas[0], n2 = notas[1], n3 = notas[2], n4 = notas[3], media = 0, mediaFinal = 0;
+
+// media = Math.Truncate(n1 * 2 + n2 * 3 + n3 * 4 + n4 * 1)/(2+3+4+1);
+
+// Console.WriteLine($"Media: {media:F1}");
+
+// if(media >= 7)
+//     Console.WriteLine("Aluno aprovado.");
+// else if (media >= 5 && media < 7)
+// {   
+//     Console.WriteLine("Aluno em exame.");
+//     double notaExame = double.Parse(Console.ReadLine());
+//     Console.WriteLine($"Nota do exame: {notaExame:F1}");
+//     mediaFinal = (media + notaExame) / 2;
+
+//     if(mediaFinal >= 5)
+//     {
+//         Console.WriteLine("Aluno aprovado.");
+//         Console.WriteLine($"Media final: {mediaFinal:F1}");
+//     }
+//     else
+//     {
+//         Console.WriteLine("Aluno reprovado.");
+//         Console.WriteLine($"Media final: {mediaFinal:F1}");
+//     }
+// }
+// else
+//     Console.WriteLine("Aluno reprovado.");
+#endregion
+
+#region coordenadas de um ponto
+
+// double[] coordenadas = Array.ConvertAll(Console.ReadLine().Split(' '), double.Parse);
+// double x = coordenadas[0], y = coordenadas[1];
+
+// if(x > 0 && y > 0)
+//     Console.WriteLine("Q1");
+// else if(x < 0 && y > 0)
+//     Console.WriteLine("Q2");
+// else if(x < 0 && y < 0)
+//     Console.WriteLine("Q3");
+// else if(x > 0 && y < 0)
+//     Console.WriteLine("Q4");
+// else if(x == 0 && y > 0 || y < 0)
+//     Console.WriteLine("Eixo Y");
+// else if(x > 0 || x < 0 && y == 0)
+//     Console.WriteLine("Eixo X");
+// else Console.WriteLine("Origem");
+#endregion
+
+#region sort simples
+
+// int[] numeros = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
+// int n1 = numeros[0], n2 = numeros[1], n3 = numeros[2];
+// Array.Sort(numeros);
+
+// foreach (int n in numeros)
+// {
+//     Console.WriteLine(n);
+// }
+// Console.WriteLine();
+// Console.WriteLine(n1);
+// Console.WriteLine(n2);
+// Console.WriteLine(n3);
+
+#endregion
+
+#region triângulo
+
+// double[] lados = Array.ConvertAll(Console.ReadLine().Split(' '), double.Parse);
+
+// if(lados[0] + lados[1] > lados[2] && lados[0] + lados[2] > lados[1] && lados[2] + lados[1] > lados[0])
+//     Console.WriteLine($"Perimetro: {lados[0] + lados[1] + lados[2]:F1}");
+// else Console.WriteLine($"Area: {(lados[0] + lados[1])*lados[2]/2:F1}");
+    
+#endregion
+
+#region múltiplo
+
+// int[] n = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
+
+// if(n[0] % n[1] == 0 || n[1] % n[0] == 0)
+//     Console.WriteLine("Sao Multiplos");
+// else Console.WriteLine("Nao sao Multiplos");
+#endregion
+
+#region tipos de triangulo
+
+// double[] lados = Array.ConvertAll(Console.ReadLine().Split(' '), double.Parse);
+// Array.Sort(lados);
+// Array.Reverse(lados);
+
+// if(lados[0] >= lados[1] + lados[2])
+//     Console.WriteLine("NAO FORMA TRIANGULO");
+// else if(Math.Pow(lados[0], 2) == Math.Pow(lados[1], 2) + Math.Pow(lados[2], 2))
+//     Console.WriteLine("TRIANGULO RETANGULO");
+// else if(Math.Pow(lados[0], 2) > Math.Pow(lados[1], 2) + Math.Pow(lados[2], 2))
+//     Console.WriteLine("TRIANGULO OBTUSANGULO");
+// else if(Math.Pow(lados[0], 2) < Math.Pow(lados[1], 2) + Math.Pow(lados[2], 2))
+//     Console.WriteLine("TRIANGULO ACUTANGULO");
+
+// if(lados[0] == lados[1] && lados[1] == lados[2])
+//     Console.WriteLine("TRIANGULO EQUILATERO");
+// else if(lados[0] != lados[1] && lados[1] == lados[2] || lados[1] != lados[2] && lados[2] == lados[0] || lados[2] != lados[0] && lados[0] == lados[1])
+//     Console.WriteLine("TRIANGULO ISOSCELES");
+#endregion
+
+#region tempo de jogo
+
+// int[] hora = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
+
+// if(hora[0] > hora[1])
+//     Console.WriteLine($"O JOGO DUROU {(hora[1] + 24)- hora[0]} HORA(S)");
+// else if(hora[0] < hora[1])
+//     Console.WriteLine($"O JOGO DUROU {hora[1] - hora[0]} HORA(S)");
+// else if(hora[0] == hora[1])
+//     Console.WriteLine($"O JOGO DUROU 24 HORA(S)");
+#endregion
+
+#region tempo de jogo com minutos
+
+int[] tempo = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
+int HrA = tempo[0], MinA = tempo[1], HrB = tempo[2], MinB = tempo[3], temp = 0;
+
+temp = ((HrB*60)+MinB) - ((HrA*60)+MinA);
+
+if (temp <= 0)
+    temp += 24 * 60;
+        
+Console.WriteLine($"O JOGO DUROU {temp/60} HORA(S) E {temp%60} MINUTO(S)");
+#endregion
