@@ -1,9 +1,10 @@
 ﻿class Program
 {
-    public static void Main()
+    static void Main()
     {
-        Humano pessoa = new Humano();
+        Carro carro = new Carro(ano: 2020, marca: "toyota", modelo: "corolla");
+        Console.WriteLine(carro.Ano);
 
-        pessoa.Andar();
+        Console.WriteLine(carro.ToString());
     }
 }
