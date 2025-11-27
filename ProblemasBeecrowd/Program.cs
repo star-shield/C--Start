@@ -503,13 +503,78 @@
 
 #region tempo de jogo com minutos
 
-int[] tempo = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
-int HrA = tempo[0], MinA = tempo[1], HrB = tempo[2], MinB = tempo[3], temp = 0;
+// int[] tempo = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
+// int HrA = tempo[0], MinA = tempo[1], HrB = tempo[2], MinB = tempo[3], temp = 0;
 
-temp = ((HrB*60)+MinB) - ((HrA*60)+MinA);
+// temp = ((HrB*60)+MinB) - ((HrA*60)+MinA);
 
-if (temp <= 0)
-    temp += 24 * 60;
+// if (temp <= 0)
+//     temp += 24 * 60;
         
-Console.WriteLine($"O JOGO DUROU {temp/60} HORA(S) E {temp%60} MINUTO(S)");
+// Console.WriteLine($"O JOGO DUROU {temp/60} HORA(S) E {temp%60} MINUTO(S)");
+#endregion
+
+#region aumento de salário
+
+// double salario = double.Parse(Console.ReadLine());
+
+// if(salario > 0 && salario <= 400)
+//     Console.WriteLine($"Novo salario: {(15 * salario)/100 + salario:F2}\nReajuste ganho: {(15 * salario)/100:F2}\nEm percentual: 15 %");
+// else if (salario > 400 && salario <= 800)
+//     Console.WriteLine($"Novo salario: {(12 * salario)/100 + salario:F2}\nReajuste ganho: {(12 * salario)/100:F2}\nEm percentual: 12 %");
+// else if (salario > 800 && salario <= 1200)
+//     Console.WriteLine($"Novo salario: {(10 * salario)/100 + salario:F2}\nReajuste ganho: {(10 * salario)/100:F2}\nEm percentual: 10 %");
+// else if (salario > 1200 && salario <= 2000)
+//     Console.WriteLine($"Novo salario: {(7 * salario)/100 + salario:F2}\nReajuste ganho: {(7 * salario)/100:F2}\nEm percentual: 7 %");
+// else if (salario > 2000)
+//     Console.WriteLine($"Novo salario: {(4 * salario)/100 + salario:F2}\nReajuste ganho: {(4 * salario)/100:F2}\nEm percentual: 4 %");
+#endregion
+
+#region animal
+
+// string tipoEsqueleto = Console.ReadLine();     
+// string classeAnimal = Console.ReadLine();      
+// string tipoAlimentacao = Console.ReadLine();
+
+// if (tipoEsqueleto == "vertebrado")
+//     if(classeAnimal == "ave")
+//         if(tipoAlimentacao == "carnivoro")
+//             Console.WriteLine("aguia");
+//         else Console.WriteLine("pomba");
+//     else
+//         if (tipoAlimentacao == "onivoro")
+//             Console.WriteLine("homem");
+//         else Console.WriteLine("vaca");
+// else
+//     if(classeAnimal == "inseto")
+//         if(tipoAlimentacao == "hematofago")
+//             Console.WriteLine("pulga");
+//         else Console.WriteLine("lagarta");
+//     else
+//         if (tipoAlimentacao == "hematofago")
+//             Console.WriteLine("sanguessuga");
+//         else Console.WriteLine("minhoca");
+#endregion
+
+#region ddd
+
+// int ddd = int.Parse(Console.ReadLine());
+
+// switch (ddd)
+// {
+//     case 61: Console.WriteLine("Brasilia"); break;
+//     case 71: Console.WriteLine("Salvador"); break;
+//     case 11: Console.WriteLine("Sao Paulo"); break;
+//     case 21: Console.WriteLine("Rio de Janeiro"); break;
+//     case 32: Console.WriteLine("Juiz de Fora"); break;
+//     case 19: Console.WriteLine("Campinas"); break;
+//     case 27: Console.WriteLine("Vitoria"); break;
+//     case 31: Console.WriteLine("Belo Horizonte"); break;
+//     default: Console.WriteLine("DDD nao cadastrado"); break;
+// }
+#endregion
+
+#region imposto de renda
+
+Console.WriteLine((2000.00 * 16)/100 + ((520.00 * 28)/100)); 
 #endregion
