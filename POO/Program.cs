@@ -5,6 +5,6 @@
         Carro carro = new Carro(ano: 2020, marca: "toyota", modelo: "corolla");
         Console.WriteLine(carro.Ano);
 
-        Console.WriteLine(carro.ToString());
+        Console.WriteLine(carro);
     }
 }

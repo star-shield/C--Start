@@ -576,5 +576,207 @@
 
 #region imposto de renda
 
-Console.WriteLine((2000.00 * 16)/100 + ((520.00 * 28)/100)); 
+// double salario = double.Parse(Console.ReadLine());
+
+// if(salario <= 2000)
+//     Console.WriteLine($"Isento");
+// else if (salario <= 3000)
+//     Console.WriteLine($"R$ {(salario - 2000)*0.08:F2}");
+// else if (salario <= 4500)
+//     Console.WriteLine($"R$ {1000 * 0.08 + (salario - 3000) * 0.18:F2}");
+// else Console.WriteLine($"R$ {1000 * 0.08 + 1500 * 0.18 +(salario - 4500) * 0.28:F2}");
+#endregion
+
+#region mês
+
+// int mes = int.Parse(Console.ReadLine());
+
+// switch (mes)
+// {
+//     case 1: Console.WriteLine("January"); break;
+//     case 2: Console.WriteLine("February"); break;
+//     case 3: Console.WriteLine("March"); break;
+//     case 4: Console.WriteLine("April"); break;
+//     case 5: Console.WriteLine("May"); break;
+//     case 6: Console.WriteLine("June"); break;
+//     case 7: Console.WriteLine("July"); break;
+//     case 8: Console.WriteLine("August"); break;
+//     case 9: Console.WriteLine("September"); break;
+//     case 10: Console.WriteLine("October"); break;
+//     case 11: Console.WriteLine("November"); break;
+//     case 12: Console.WriteLine("December"); break;
+//     default: break;
+// }
+#endregion
+
+#region numeros pares
+
+// for(int i = 1; i <= 100; i++)
+// {
+//     if(i % 2 == 0)
+//         Console.WriteLine(i);
+// }
+#endregion
+
+#region numeros positivos
+
+// int contador = 0;
+
+// for(int i = 0; i < 6; i++)
+// {
+//     double numero = double.Parse(Console.ReadLine());
+//     if(numero > 0)
+//         contador++;
+// }
+// Console.WriteLine($"{contador} valores positivos");
+#endregion
+
+#region tempo de um evento
+
+// string[] diaInicio = Console.ReadLine().Split(' ');
+// int diaI = int.Parse(diaInicio[1]);
+
+// string[] horaInicio = Console.ReadLine().Split(' ', ':');
+// int horaI = int.Parse(horaInicio[0]);
+// int minI = int.Parse(horaInicio[2]);
+// int segI = int.Parse(horaInicio[4]);
+
+// string[] diaFim = Console.ReadLine().Split(' ');
+// int diaF = int.Parse(diaFim[1]);
+
+// string[] horaFim = Console.ReadLine().Split(' ', ':');
+// int horaF = int.Parse(horaFim[0]);
+// int minF = int.Parse(horaFim[2]);
+// int segF = int.Parse(horaFim[4]);
+
+// int inicio = segI + minI * 60 + horaI * 3600 + diaI * 86400;
+// int fim = segF + minF * 60 + horaF * 3600 + diaF * 86400;
+
+// int duracao = fim - inicio;
+
+// int dias = duracao / 86400;
+// duracao %= 86400;
+
+// int horas = duracao / 3600;
+// duracao %= 3600;
+
+// int minutos = duracao / 60;
+// int segundos = duracao % 60;
+
+// Console.WriteLine($"{dias} dia(s)");
+// Console.WriteLine($"{horas} hora(s)");
+// Console.WriteLine($"{minutos} minuto(s)");
+// Console.WriteLine($"{segundos} segundo(s)");
+#endregion
+
+#region positivos e média
+
+// double soma = 0, numero;
+// int contador = 0;
+
+// for(int i = 0; i < 6; i++)
+// {
+//     numero = double.Parse(Console.ReadLine());
+//     if(numero > 0)
+//     {
+//         soma+=numero;
+//         contador++;
+//     }
+// }
+// Console.WriteLine($"{contador} valores positivos");
+// Console.WriteLine($"{soma / contador:F1}");
+#endregion
+
+#region pares entre cinco numeros
+
+// int contador = 0;
+
+// for(int i = 0; i < 5; i++)
+// {
+//     int numero = int.Parse(Console.ReadLine());
+//     if(numero % 2 == 0)
+//         contador++;
+// }
+// Console.WriteLine($"{contador} valores pares");
+#endregion
+
+#region pares, impares, positivos e negativos
+
+// int par = 0, impar = 0, positivo = 0, negativo = 0;
+
+// for(int i = 0; i < 5; i++)
+// {
+//     int n = int.Parse(Console.ReadLine());
+//     if(n % 2 == 0)
+//         par++;
+//     if(n % 2 != 0)
+//         impar++;
+//     if(n > 0)
+//         positivo++;
+//     if(n < 0)
+//         negativo++;
+// }
+// Console.WriteLine($"{par} valor(es) par(es)");
+// Console.WriteLine($"{impar} valor(es) impar(es)");
+// Console.WriteLine($"{positivo} valor(es) positivo(s)");
+// Console.WriteLine($"{negativo} valor(es) negativo(s)");
+#endregion
+
+#region numeros impares
+
+// int n = int.Parse(Console.ReadLine());
+
+// for(int i = 1; i <= n; i++)
+// {
+//     if(i % 2 != 0)
+//         Console.WriteLine(i);
+// }
+#endregion
+
+#region seis numeros impares
+
+// int n = int.Parse(Console.ReadLine());
+
+// for(int i = n; i <= n+11; i++)
+// {
+//     if(i % 2 != 0)
+//         Console.WriteLine(i);
+// }
+#endregion
+
+#region soma de impares consecutivos
+
+// int x = int.Parse(Console.ReadLine()), y = int.Parse(Console.ReadLine()), soma = 0;
+
+// for(int i = x-1; i > y; i--)
+// {
+//     if(i % 2 != 0)
+//         soma+=i;
+// }
+// Console.WriteLine(soma);
+#endregion
+
+#region intervalo 2
+
+// int n = int.Parse(Console.ReadLine()), inp = 0, outp = 0;
+
+// for (int i = 0; i < n; i++)
+// {
+//     int x = int.Parse(Console.ReadLine());
+//     if(x >= 10 && x <= 20)
+//         inp++;
+//     else outp++;
+// }
+// Console.WriteLine($"{inp} in\n{outp} out");
+#endregion
+
+#region quadrado de pares
+
+int n = int.Parse(Console.ReadLine());
+
+for (int i = 1; i <= n; i++)
+{
+    if (i % 2 == 0)
+        Console.WriteLine($"{i} ^ 2 = {Math.Pow(i, 2)}");
+}
 #endregion
