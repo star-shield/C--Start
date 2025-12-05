@@ -851,27 +851,145 @@
 
 #region experiencias
 
-int n = int.Parse(Console.ReadLine()), soma = 0, coelho = 0, sapo = 0, rato = 0;
+// int n = int.Parse(Console.ReadLine()), soma = 0, coelho = 0, sapo = 0, rato = 0;
 
-for(int i = 0; i < n; i++)
+// for(int i = 0; i < n; i++)
+// {
+//     string[] x = Console.ReadLine().Split(' ');
+//     int quantia = int.Parse(x[0]);
+//     char tipo = char.Parse(x[1]);
+
+//     if(tipo == 'R')
+//         rato += quantia;
+//     else if (tipo == 'S')
+//         sapo += quantia;
+//     else if (tipo == 'C')
+//         coelho += quantia;
+//     soma += quantia;
+// }
+// Console.WriteLine($"Total: {soma} cobaias");
+// Console.WriteLine($"Total de coelhos: {coelho}");
+// Console.WriteLine($"Total de ratos: {rato}");
+// Console.WriteLine($"Total de sapos: {sapo}");
+// Console.WriteLine($"Percentual de coelhos: {(double)coelho/(double)soma*100:F2} %");
+// Console.WriteLine($"Percentual de ratos: {(double)rato/(double)soma*100:F2} %");
+// Console.WriteLine($"Percentual de sapos: {(double)sapo/(double)soma*100:F2} %");
+#endregion
+
+#region sequencia ij1
+// int j = 60;
+// for (int i = 1; j >= 0; i += 3)
+// {
+//     Console.WriteLine($"I={i} J={j}");
+//     j-=5;
+// }
+#endregion
+
+#region sequencia ij2
+// int j = 7;
+// for (int i = 1; i < 10; i += 2)
+// {
+//     for(int x = 0; x < 3; x++)
+//     {
+//         Console.WriteLine($"I={i} J={j}");
+//         j--;
+//     }
+//     j=7;
+// }
+#endregion
+
+#region sequencia ij3
+// int j = 7, aux = 0;
+// for (int i = 1; i < 10; i += 2)
+// {
+//     for(int x = 0; x < 3; x++)
+//     {
+//         Console.WriteLine($"I={i} J={j}");
+//         j--;
+//     }
+//     aux = j + 5;
+//     j = aux; 
+// }
+#endregion
+
+#region sequencia ij4
+// double i = 0;
+
+// while (i <= 2.0 + 0.0001) // margem para evitar erro de ponto flutuante
+// {
+//     double j1 = 1 + i;
+//     double j2 = 2 + i;
+//     double j3 = 3 + i;
+
+//     if (Math.Abs(i - Math.Round(i)) < 0.0001)
+//     {
+//         Console.WriteLine($"I={i:0} J={j1:0}");
+//         Console.WriteLine($"I={i:0} J={j2:0}");
+//         Console.WriteLine($"I={i:0} J={j3:0}");
+//     }
+//     else
+//     {
+//         Console.WriteLine($"I={i:0.0} J={j1:0.0}");
+//         Console.WriteLine($"I={i:0.0} J={j2:0.0}");
+//         Console.WriteLine($"I={i:0.0} J={j3:0.0}");
+//     }
+
+//     i += 0.2;
+// }
+
+#endregion
+
+#region soma de impares consecutivos II
+// int n = int.Parse(Console.ReadLine());
+
+// for(int i = 0; i < n; i++)
+// {
+//     int soma = 0;
+//     int[] xEy = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
+//     if(xEy[0] <= xEy[1])
+//     {
+//         for(int x = xEy[0]+1; x < xEy[1]; x++)
+//         {
+//         if(x % 2 != 0)
+//             soma += x;
+//         }
+//     }
+//     else
+//     {
+//         for(int x = xEy[1]+1; x < xEy[0]; x++)
+//         {
+//         if(x % 2 != 0)
+//             soma += x;
+//         }
+//     }
+//     Console.WriteLine(soma);
+// }
+#endregion
+
+#region sequencia de numeros e soma
+int[] xEy = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
+int soma = 0;
+while(xEy[0] > 0 && xEy[1] > 0)
 {
-    string[] x = Console.ReadLine().Split(' ');
-    int quantia = int.Parse(x[0]);
-    char tipo = char.Parse(x[1]);
-
-    if(tipo == 'R')
-        rato += quantia;
-    else if (tipo == 'S')
-        sapo += quantia;
-    else if (tipo == 'C')
-        coelho += quantia;
-    soma += quantia;
+    if(xEy[0] < xEy[1])
+    {
+        for(int i = xEy[0]; i <= xEy[1]; i++)
+        {
+            Console.Write($"{i} ");
+            soma += i;
+        }
+        Console.WriteLine($"Sum={soma}");
+    }
+    else
+    {
+        for(int i = xEy[1]; i <= xEy[0]; i++)
+        {
+            Console.Write($"{i} ");
+            soma += i;
+        }
+        Console.WriteLine($"Sum={soma}");
+    }
+    soma = 0;
+    xEy = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
 }
-Console.WriteLine($"Total: {soma} cobaias");
-Console.WriteLine($"Total de coelhos: {coelho}");
-Console.WriteLine($"Total de ratos: {rato}");
-Console.WriteLine($"Total de sapos: {sapo}");
-Console.WriteLine($"Percentual de coelhos: {(double)coelho/(double)soma*100:F2} %");
-Console.WriteLine($"Percentual de ratos: {(double)rato/(double)soma*100:F2} %");
-Console.WriteLine($"Percentual de sapos: {(double)sapo/(double)soma*100:F2} %");
 #endregion
