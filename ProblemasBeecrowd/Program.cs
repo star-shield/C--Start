@@ -772,11 +772,106 @@
 
 #region quadrado de pares
 
-int n = int.Parse(Console.ReadLine());
+// int n = int.Parse(Console.ReadLine());
 
-for (int i = 1; i <= n; i++)
+// for (int i = 1; i <= n; i++)
+// {
+//     if (i % 2 == 0)
+//         Console.WriteLine($"{i} ^ 2 = {Math.Pow(i, 2)}");
+// }
+#endregion
+
+#region par ou impar
+
+// int n = int.Parse(Console.ReadLine());
+
+// for (int i = 0; i < n; i++)
+// {
+//     int x = int.Parse(Console.ReadLine());
+//     if(x % 2 == 0 && x > 0)
+//         Console.WriteLine("EVEN POSITIVE");
+//     else if(x % 2 == 0 && x < 0)
+//         Console.WriteLine("EVEN NEGATIVE");
+//     else if(x % 2 != 0 && x > 0)
+//         Console.WriteLine("ODD POSITIVE");
+//     else if(x % 2 != 0 && x < 0)
+//         Console.WriteLine("ODD NEGATIVE");
+//     else Console.WriteLine("NULL");
+// }
+#endregion
+
+#region resto2
+
+// int n = int.Parse(Console.ReadLine());
+
+// for(int i = 1; i <= 10000; i++)
+// {
+//     if(i % n == 2)
+//         Console.WriteLine(i);
+// }
+#endregion
+
+#region tabuada
+
+// int n = int.Parse(Console.ReadLine());
+
+// for(int i = 1; i <= 10; i++)
+// {
+//     Console.WriteLine($"{i} x {n} = {i*n}");
+// }
+#endregion
+
+#region media ponderada
+
+// int n = int.Parse(Console.ReadLine());
+
+// for(int i = 0; i < n; i++)
+// {
+//     double[] x = Array.ConvertAll(Console.ReadLine().Split(' '), double.Parse);
+//     Console.WriteLine($"{(x[0]*2 + x[1]*3 + x[2]*5)/(2+3+5):F1}");
+// }
+#endregion
+
+#region maior e posição
+
+// int maior = 0, posicao = 0;
+
+// for(int i = 1; i <= 100; i++)
+// {
+//     int x = int.Parse(Console.ReadLine());
+//     if(x > maior)
+//     {
+//         maior = x;
+//         posicao = i;
+//     }
+// }
+// Console.WriteLine(maior);
+// Console.WriteLine(posicao);
+#endregion
+
+#region experiencias
+
+int n = int.Parse(Console.ReadLine()), soma = 0, coelho = 0, sapo = 0, rato = 0;
+
+for(int i = 0; i < n; i++)
 {
-    if (i % 2 == 0)
-        Console.WriteLine($"{i} ^ 2 = {Math.Pow(i, 2)}");
+    string[] x = Console.ReadLine().Split(' ');
+    int quantia = int.Parse(x[0]);
+    char tipo = char.Parse(x[1]);
+
+    if(tipo == 'R')
+        rato += quantia;
+    else if (tipo == 'S')
+        sapo += quantia;
+    else if (tipo == 'C')
+        coelho += quantia;
+    soma += quantia;
 }
+Console.WriteLine($"Total: {soma} cobaias");
+Console.WriteLine($"Total de coelhos: {coelho}");
+Console.WriteLine($"Total de ratos: {rato}");
+Console.WriteLine($"Total de sapos: {sapo}");
+Console.WriteLine($"Percentual de coelhos: {(double)coelho/(double)soma*100:F2} %");
+Console.WriteLine($"Percentual de ratos: {(double)rato/(double)soma*100:F2} %");
+Console.WriteLine($"Percentual de sapos: {(double)sapo/(double)soma*100:F2} %");
 #endregion
