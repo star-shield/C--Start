@@ -1,4 +1,5 @@
-﻿#region hello world
+﻿using System.Text;
+#region hello world
 
 // Console.WriteLine("Hello, World!");
 #endregion
@@ -140,7 +141,7 @@
 #endregion
 
 #region o maior🌟
-    
+
 // int[] n = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
 
 // int MaiorAB = (n[0] + n[1] + Math.Abs(n[0] - n[1]))/2;
@@ -166,7 +167,7 @@
 // float x1 = primeiraLinha[0], y1 = primeiraLinha[1], x2 = segundaLinha[0], y2 = segundaLinha[1];
 
 // Console.WriteLine($"{Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2)):F4}");
-    
+
 #endregion
 
 #region distância
@@ -174,7 +175,7 @@
 // int km = int.Parse(Console.ReadLine());
 
 // Console.WriteLine($"{km*2} minutos");
-    
+
 #endregion
 
 #region gasto de combustível
@@ -220,7 +221,7 @@
 // int horas = s / 3600;
 // int minutos = (s%3600) / 60;
 // int segundos = s%60;
-    
+
 // Console.WriteLine($"{horas}:{minutos}:{segundos}");
 #endregion
 
@@ -235,7 +236,7 @@
 // dias %= 30;
 
 // Console.WriteLine($"{ano} ano (s)\n{mes} mes (es)\n{dias} dia (s)");
-    
+
 #endregion
 
 #region notas e moedas🌟
@@ -322,7 +323,7 @@
 // {
 //     Console.WriteLine("valores nao aceitos");
 // }
-    
+
 #endregion
 
 #region formula de bhaskara
@@ -358,7 +359,7 @@
 //     Console.WriteLine("Intervalo (75,100]");
 // else
 //     Console.WriteLine("Fora de intervalo");
-    
+
 #endregion
 
 #region lanche
@@ -376,7 +377,7 @@
 //     case 5: Console.WriteLine($"Total: R$ {1.50 * (double)quantidade:F2}"); break;
 //     default: Console.WriteLine("Valor inválido"); break;
 // }
-    
+
 #endregion
 
 #region media3🌟
@@ -456,7 +457,7 @@
 // if(lados[0] + lados[1] > lados[2] && lados[0] + lados[2] > lados[1] && lados[2] + lados[1] > lados[0])
 //     Console.WriteLine($"Perimetro: {lados[0] + lados[1] + lados[2]:F1}");
 // else Console.WriteLine($"Area: {(lados[0] + lados[1])*lados[2]/2:F1}");
-    
+
 #endregion
 
 #region múltiplo
@@ -510,7 +511,7 @@
 
 // if (temp <= 0)
 //     temp += 24 * 60;
-        
+
 // Console.WriteLine($"O JOGO DUROU {temp/60} HORA(S) E {temp%60} MINUTO(S)");
 #endregion
 
@@ -967,29 +968,663 @@
 #endregion
 
 #region sequencia de numeros e soma
-int[] xEy = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
-int soma = 0;
-while(xEy[0] > 0 && xEy[1] > 0)
+// int[] xEy = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
+// int soma = 0;
+// while(xEy[0] > 0 && xEy[1] > 0)
+// {
+//     if(xEy[0] < xEy[1])
+//     {
+//         for(int i = xEy[0]; i <= xEy[1]; i++)
+//         {
+//             Console.Write($"{i} ");
+//             soma += i;
+//         }
+//         Console.WriteLine($"Sum={soma}");
+//     }
+//     else
+//     {
+//         for(int i = xEy[1]; i <= xEy[0]; i++)
+//         {
+//             Console.Write($"{i} ");
+//             soma += i;
+//         }
+//         Console.WriteLine($"Sum={soma}");
+//     }
+//     soma = 0;
+//     xEy = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
+// }
+#endregion
+
+#region crescente e decrescente
+// int[] xEy = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
+
+// while(xEy[0] != xEy[1])
+// {
+//     if(xEy[0] > xEy[1])
+//         Console.WriteLine("Decrescente");
+//     else Console.WriteLine("Crescente");
+
+//     xEy = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
+// }
+#endregion
+
+#region senha fixa
+// int senha = int.Parse(Console.ReadLine());
+
+// while(senha != 2002)
+// {
+//     Console.WriteLine("Senha Invalida");
+//     senha = int.Parse(Console.ReadLine());
+// }
+// Console.WriteLine("Acesso Permitido");
+#endregion
+
+#region quadrante
+// int[] coordenadas = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
+// int x = coordenadas[0], y = coordenadas[1];
+
+// while(x != 0 && y != 0)
+// {
+//     if(x > 0 && y > 0)
+//     Console.WriteLine("primeiro");
+//     else if(x < 0 && y > 0)
+//     Console.WriteLine("segundo");
+//     else if(x < 0 && y < 0)
+//     Console.WriteLine("terceiro");
+//     else if(x > 0 && y < 0)
+//     Console.WriteLine("quarto");
+
+//     coordenadas = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
+//     x = coordenadas[0]; y = coordenadas[1];
+// }
+#endregion
+
+#region dividindo x por y
+// int n = int.Parse(Console.ReadLine());
+
+// for(int i = 0; i < n; i++)
+// {
+//     int[] xEy = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
+
+//     if(xEy[1] == 0)
+//     {
+//         Console.WriteLine("divisao impossivel");
+//         continue;
+//     }
+//     Console.WriteLine($"{(double)xEy[0] / (double)xEy[1]:0.0}");
+// }
+#endregion
+
+#region validação de nota
+// double n1 = double.Parse(Console.ReadLine());
+
+// while(n1 < 0.10 || n1 > 10)
+// {
+//     Console.WriteLine("nota invalida");
+//     n1 = double.Parse(Console.ReadLine());
+// }
+// double n2 = double.Parse(Console.ReadLine());
+
+// while(n2 < 0.10 || n2 > 10)
+// {
+//     Console.WriteLine("nota invalida");
+//     n2 = double.Parse(Console.ReadLine());
+// }
+// Console.WriteLine($"media = {(n1+n2)/2:0.00}");
+#endregion
+
+#region varias notas com validação
+// int x = 0;
+// do
+// {
+//     double n1 = double.Parse(Console.ReadLine());
+
+//     while(n1 < 0.10 || n1 > 10)
+//     {
+//     Console.WriteLine("nota invalida");
+//     n1 = double.Parse(Console.ReadLine());
+//     }
+//     double n2 = double.Parse(Console.ReadLine());
+
+//     while(n2 < 0.10 || n2 > 10)
+//     {
+//     Console.WriteLine("nota invalida");
+//     n2 = double.Parse(Console.ReadLine());
+//     }
+//     Console.WriteLine($"media = {(n1+n2)/2:0.00}");
+
+//     Console.WriteLine("novo calculo (1-sim 2-nao)");
+//     x = int.Parse(Console.ReadLine());
+
+//     while(x < 1 || x > 2)
+//     {
+//         Console.WriteLine("novo calculo (1-sim 2-nao)");
+//         x = int.Parse(Console.ReadLine());
+//     }
+// }while(x == 1);
+#endregion
+
+#region grenais
+// int[] gols = new int[2];
+// int x = 0, QuantGrenal = 0, inter = 0, gremio = 0, empate = 0;
+// do
+// {
+//     QuantGrenal++;
+//     gols = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
+//     if(gols[0] > gols[1])
+//         inter++;
+//     else if(gols[1] > gols[0])
+//         gremio++;
+//     else empate++;
+
+//     Console.WriteLine("Novo grenal (1-sim 2-nao)");
+//     x = int.Parse(Console.ReadLine());
+// }while(x == 1);
+
+// Console.WriteLine($"{QuantGrenal} grenais");
+// Console.WriteLine($"Inter:{inter}");
+// Console.WriteLine($"Gremio:{gremio}");
+// Console.WriteLine($"Empates:{empate}");
+
+// if(inter > gremio)
+//     Console.WriteLine($"Inter venceu mais");
+// else if(gremio > inter)
+//     Console.WriteLine($"Gremio venceu mais");
+// else Console.WriteLine($"Nao houve vencedor");
+#endregion
+
+#region multiplos de 13
+// int x = int.Parse(Console.ReadLine());
+// int y = int.Parse(Console.ReadLine());
+// int soma = 0;
+
+// if (x < y)
+// {
+//     for(int i = x; i <= y; i++)
+//     {
+//     if(i % 13 != 0)
+//         soma += Math.Abs(i);
+//     }
+// }
+// else
+// {
+//     for(int i = y; i <= x; i++)
+//     {
+//     if(i % 13 != 0)
+//         soma += Math.Abs(i);
+//     }
+// }
+// Console.WriteLine(soma);
+#endregion
+
+#region resto da divisão
+// int x = int.Parse(Console.ReadLine());
+// int y = int.Parse(Console.ReadLine());
+
+// if(x < y)
+// {
+//     for(int i = x+1; i < y; i++)
+//     {
+//         if(i % 5 == 2 || i % 5 == 3)
+//             Console.WriteLine(i);
+//     }
+// }
+// else
+// {
+//     for(int i = y+1; i < x; i++)
+//     {
+//         if(i % 5 == 2 || i % 5 == 3)
+//             Console.WriteLine(i);
+//     }
+// }
+#endregion
+
+#region tipo de combustivel
+// int n, alcool = 0, gasolina = 0, diesel = 0;
+// do
+// {
+//     n = int.Parse(Console.ReadLine());
+//     while(n < 1 || n > 4)
+//     {
+//         n = int.Parse(Console.ReadLine());
+//     }
+//     switch (n)
+//     {
+//         case 1: alcool++; break;
+//         case 2: gasolina++; break;
+//         case 3: diesel++; break;
+//         default: break;
+//     }
+// }while(n != 4);
+// Console.WriteLine("MUITO OBRIGADO");
+// Console.WriteLine($"Alcool: {alcool}");
+// Console.WriteLine($"Gasolina: {gasolina}");
+// Console.WriteLine($"Diesel: {diesel}");
+#endregion
+
+#region pum
+// int n = int.Parse(Console.ReadLine());
+// int x = 1, y = 3;
+// for(int i = 0; i < n; i++)
+// {
+//     while(x <= y)
+//     {
+//         Console.Write($"{x} ");
+//         x++;
+//     }
+//     Console.WriteLine("PUM");
+//     x+=1;
+//     y +=4;
+// }
+#endregion
+
+#region quadrado ao cubo
+// int n = int.Parse(Console.ReadLine());
+
+// for(int i = 1; i <= n; i++)
+// {
+//     Console.Write($"{i} ");
+//     for(int x = 0; x < 1; x++)
+//     {
+//         Console.Write($"{Math.Pow(i, 2)} ");
+//     }
+//     Console.Write($"{Math.Pow(i, 3)}");
+//     Console.WriteLine();
+// }
+#endregion
+
+#region sequencia logica
+// int n = int.Parse(Console.ReadLine());
+
+// for(int i = 1; i <= n; i++)
+// {
+//     Console.Write($"{i} ");
+//     for(int x = 0; x < 1; x++)
+//     {
+//         Console.Write($"{Math.Pow(i, 2)} ");
+//     }
+//     Console.Write($"{Math.Pow(i, 3)}");
+//     Console.WriteLine();
+
+//     Console.Write($"{i} ");
+//     for(int x = 0; x < 1; x++)
+//     {
+//         Console.Write($"{Math.Pow(i, 2)+1} ");
+//     }
+//     Console.Write($"{Math.Pow(i, 3)+1}");
+//     Console.WriteLine();
+// }
+#endregion
+
+#region sequencia logica 2
+// int[] xEy = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
+// int repeat = 0;
+// for(int i = 1; i <= xEy[1]; i=i)
+// {
+//     while(repeat < xEy[0])
+//     {
+//         if(repeat < xEy[0]-1)
+//             Console.Write($"{i} ");
+//         else Console.Write($"{i}");
+//         i++;
+//         repeat++;
+//     }
+//     repeat = 0;
+//     Console.WriteLine();
+// }
+#endregion
+
+#region sequencias crescentes🌟
+//primeira solução
+// int x;
+// do
+// {
+//     x = int.Parse(Console.ReadLine());
+//     for(int i = 1; i <= x; i++)
+//     {
+//         if(i < x)
+//             Console.Write($"{i} ");
+//         else Console.WriteLine(i);
+//     }
+// }while(x != 0);
+
+//segunda solução
+// int x, y=0;
+// do
+// {
+//     x = int.Parse(Console.ReadLine());
+//     for(int i = 1; i < x; i++)
+//     {
+//         y = i;
+//         Console.Write($"{i} ");
+//     }
+//     if(x == 0)
+//         break;
+//     Console.WriteLine(y+1);
+// }while(x != 0);
+
+//solução aceita
+// StringBuilder sb = new StringBuilder();
+// string n;
+// while ((n = Console.ReadLine()) != null)
+// {
+//     if(n.Trim() == "") continue;
+//     if(!int.TryParse(n.Trim(), out int X)) continue;
+//     if(X == 0) break;
+
+//     for(int i = 1; i <= X; i++)
+//     {
+//         sb.Append(i);
+//         if(i < X) sb.Append(' ');
+//     }
+//     sb.AppendLine();
+// }
+// Console.Write(sb.ToString());
+#endregion
+
+#region somando inteiros consecutivos
+// int[] AeN = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
+// int soma = 0, A = AeN[0], N = 0;
+
+// for(int i = 1; i <= AeN.Length; i++)
+// {
+//     if(AeN[i] > 0)
+//     {
+//         N = AeN[i];
+//         break;
+//     }    
+// }
+// for(int i = 0; i < N; i++)
+// {
+//     soma += A + i;
+// }
+// Console.WriteLine(soma);
+#endregion
+
+#region ultrapassando z
+// int X = int.Parse(Console.ReadLine());
+// int Z = int.Parse(Console.ReadLine()), contador = 0, soma = 0;
+
+// while(Z <= X)
+// {
+//     Z = int.Parse(Console.ReadLine());
+// }
+// for(int i = X; soma <= Z; i++)
+// {
+//     soma+= i;
+//     contador++;
+// }
+// Console.WriteLine(contador);
+#endregion
+
+#region fibonacci facil
+// StringBuilder sb = new StringBuilder();
+// int n = int.Parse(Console.ReadLine());
+// int a = 0, b = 1, prox = 0;
+
+// for (int i = 0; i < n; i++)
+// {
+//     if(i < 2)
+//     {
+//         sb.Append(i);
+//         sb.Append(' ');
+//         continue;
+//     }
+//     prox = a + b;
+//     a = b;
+//     b = prox;
+
+//     sb.Append(prox);
+//     if(i < n-1) sb.Append(' ');
+// }
+//     sb.AppendLine();
+//     Console.Write(sb.ToString());
+#endregion
+
+#region fatorial simples
+// int n = int.Parse(Console.ReadLine()), fatorial = 1;
+
+// for(int i = 1; i <= n; i++)
+// {
+//     fatorial *= i;
+// }
+// Console.WriteLine(fatorial);
+#endregion
+
+#region idades
+// int idade = int.Parse(Console.ReadLine()), soma = 0, contador = 0;
+
+// while(idade > 0)
+// {
+//     soma += idade;
+//     contador++;
+//     idade = int.Parse(Console.ReadLine());
+// }
+// Console.WriteLine($"{(double)soma / (double)contador:0.00}");
+#endregion
+
+#region sequencia s
+// double S = 0, dec = 0;
+
+// for(int i = 2; i <= 100; i++)
+// {
+//     dec += (1.0/(double)i);
+// }
+// S = 1 + dec;
+// Console.WriteLine($"{S:0.00}");
+#endregion
+
+#region sequencia s II
+// double S = 0, numerador = 1, denominador = 1;
+
+// for (int i = 0; i < 20; i++)
+// {
+//     S += numerador / denominador;
+//     numerador += 2;
+//     denominador *= 2.0;
+// }
+// Console.WriteLine($"{S:0.00}");
+#endregion
+
+#region divisores
+// int n = int.Parse(Console.ReadLine());
+
+// for(int i = 1; i <= n; i++){
+//     if(n % i == 0)
+//         Console.WriteLine(i);
+// }
+#endregion
+
+#region soma de impares consecutivos III
+// int n = int.Parse(Console.ReadLine());
+
+// for(int i = 0; i < n; i++)
+// {
+//     int[] XeY = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
+//     int contador = 0, soma = 0;
+//     for(int x = XeY[0]; contador < XeY[1]; x++)
+//     {
+//         if(x % 2 != 0)
+//         {
+//             soma += x;
+//             contador++;
+//         }
+//     }
+//     Console.WriteLine(soma);
+//     soma = 0;
+//     contador = 0;
+// }
+#endregion
+
+#region soma de pares consecutivos
+// int x = int.Parse(Console.ReadLine());;
+
+// while(x != 0)
+// {
+//     int soma = 0, contador = 0;
+
+//     for(int i = x; contador < 5; i++)
+//     {
+//         if(i % 2 == 0)
+//         {
+//             soma += i;
+//             contador++;
+//         }
+//     }
+//     Console.WriteLine(soma);
+//     x = int.Parse(Console.ReadLine());
+// }
+#endregion
+
+#region crescimento populacional
+// StringBuilder sb = new StringBuilder();
+// int teste = int.Parse(Console.ReadLine());
+
+// for(int i = 0; i < teste; i++)
+// {
+//     string[] line = Console.ReadLine().Split(' ');
+//     int PA = int.Parse(line[0]), PB = int.Parse(line[1]), SomaAnoA = 0;
+//     double G1 = double.Parse(line[2]), G2 = double.Parse(line[3]);
+    
+//     for(int y = 0; PA <= PB; y++)
+//     {
+//         PA += (int)(PA * (G1/100));
+//         PB += (int)(PB * (G2/100));
+//         SomaAnoA++;
+//         if(SomaAnoA > 100)
+//         {
+//             sb.AppendLine("Mais de 1 seculo."); 
+//             break;
+//         } 
+//     }
+//     if(SomaAnoA <= 100)
+//         sb.AppendLine(SomaAnoA + " anos.");
+//     SomaAnoA = 0;
+// }
+// Console.Write(sb.ToString());
+#endregion
+
+#region numero perfeito
+// int n = int.Parse(Console.ReadLine());
+
+// for(int i = 0; i < n; i++)
+// {
+//     int x = int.Parse(Console.ReadLine()), soma = 0;
+//     for(int  y= 1; y < x; y++)
+//     {
+//         if(x % y == 0)
+//         {
+//             soma += y;
+//         }
+//     }
+//     if(soma == x)
+//         Console.WriteLine($"{x} eh perfeito");
+//     else Console.WriteLine($"{x} nao eh perfeito");
+//     soma = 0;
+// }
+#endregion
+
+#region numero primo
+// int teste = int.Parse(Console.ReadLine());
+
+// for(int i = 0; i < teste; i++)
+// {
+//     int x = int.Parse(Console.ReadLine()), soma = 0;
+
+//     for(int y = 1; y <= x; y++)
+//     {
+//         if(x % y == 0)
+//             soma += y;
+//     }
+//     if(soma > x+1)
+//         Console.WriteLine($"{x} nao eh primo");
+//     else Console.WriteLine($"{x} eh primo");
+// }
+#endregion
+
+#region substituição em vetorI
+// StringBuilder sb = new StringBuilder();
+// int[] x = new int[10];
+
+// for(int i = 0; i < 10; i++)
+// {
+//     x[i] = int.Parse(Console.ReadLine());
+//     if(x[i] <= 0)
+//         x[i] = 1;
+//     sb.AppendLine($"X[{i}] = {x[i]}");
+// }
+// Console.Write(sb.ToString());
+#endregion
+
+#region preenchimento de vetorI
+// int[] n = new int[10];
+// int num = int.Parse(Console.ReadLine());
+
+// for(int i = 0; i < 10; i++)
+// {
+//     n[i] = num;
+//     Console.WriteLine($"N[{i}] = {n[i]}");
+//     num*=2;
+// }
+#endregion
+
+#region seleção em vetor I
+// StringBuilder sb = new StringBuilder();
+// double[] A = new double[100];
+
+// for(int i = 0; i < 100; i++)
+// {
+//     A[i] = double.Parse(Console.ReadLine());
+//     if(A[i] <= 10)
+//         sb.AppendLine($"A[{i}] = {A[i]:0.0}");
+// }
+// Console.Write(sb.ToString());
+#endregion
+
+#region troca em vetor I
+// int[] N = new int[20];
+// int inicio = 0, fim = 19;
+
+// for(int i = 0; i < 20; i++)
+// {
+//     N[i] = int.Parse(Console.ReadLine());
+// }
+// while(inicio <= fim)
+// {
+//     int In = 0, Fn = 0;
+//     In = N[inicio];
+//     Fn = N[fim];
+//     N[inicio] = Fn;
+//     N[fim] = In;
+//     inicio++;
+//     fim--;
+// }
+// for(int i = 0; i < 20; i++)
+// {
+//     Console.WriteLine($"N[{i}] = {N[i]}");
+// }
+#endregion
+
+#region fibonacci em vetor
+int T = int.Parse(Console.ReadLine());
+
+for(int i = 0; i < T; i++)
 {
-    if(xEy[0] < xEy[1])
+    ulong Fib = 0UL;
+    int N = int.Parse(Console.ReadLine());
+    ulong a = 0UL, b = 1UL;
+
+    for(int x = 0; x <= N; x++)
     {
-        for(int i = xEy[0]; i <= xEy[1]; i++)
+        if(x < 2)
         {
-            Console.Write($"{i} ");
-            soma += i;
+            Fib = (ulong)x;
+            continue;
         }
-        Console.WriteLine($"Sum={soma}");
+        Fib = a + b;
+        a = b;
+        b = Fib;
     }
-    else
-    {
-        for(int i = xEy[1]; i <= xEy[0]; i++)
-        {
-            Console.Write($"{i} ");
-            soma += i;
-        }
-        Console.WriteLine($"Sum={soma}");
-    }
-    soma = 0;
-    xEy = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
+    Console.WriteLine($"Fib({N}) = {Fib}");
 }
 #endregion
