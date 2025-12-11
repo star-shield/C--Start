@@ -1606,25 +1606,152 @@
 #endregion
 
 #region fibonacci em vetor
-int T = int.Parse(Console.ReadLine());
+// int T = int.Parse(Console.ReadLine());
 
-for(int i = 0; i < T; i++)
+// for(int i = 0; i < T; i++)
+// {
+//     ulong Fib = 0UL;
+//     int N = int.Parse(Console.ReadLine());
+//     ulong a = 0UL, b = 1UL;
+
+//     for(int x = 0; x <= N; x++)
+//     {
+//         if(x < 2)
+//         {
+//             Fib = (ulong)x;
+//             continue;
+//         }
+//         Fib = a + b;
+//         a = b;
+//         b = Fib;
+//     }
+//     Console.WriteLine($"Fib({N}) = {Fib}");
+// }
+#endregion
+
+#region preenchimento de vetor II
+// StringBuilder sb = new StringBuilder();
+// int[] N = new int[1000];
+// int T = int.Parse(Console.ReadLine()), x = 0;
+
+// for(int i = 0; i < 1000; i++)
+// {
+//     if(x < T)
+//     {
+//         N[i] = x;
+//         sb.AppendLine($"N[{i}] = {N[i]}");
+//         x++;
+//     }
+//     if(x == T)
+//         x = 0;
+// }
+// Console.Write(sb.ToString());
+#endregion
+
+#region preenchimento de vetor III😡
+decimal[] N = new decimal[100];
+decimal x = decimal.Parse(Console.ReadLine());
+
+for(int i = 0; i < 100; i++)
 {
-    ulong Fib = 0UL;
-    int N = int.Parse(Console.ReadLine());
-    ulong a = 0UL, b = 1UL;
-
-    for(int x = 0; x <= N; x++)
-    {
-        if(x < 2)
-        {
-            Fib = (ulong)x;
-            continue;
-        }
-        Fib = a + b;
-        a = b;
-        b = Fib;
-    }
-    Console.WriteLine($"Fib({N}) = {Fib}");
+    N[i] = x;
+    Console.WriteLine($"N[{i}] = {Math.Truncate(N[i] * 10000m)/10000m:F4}");
+    x /= 2.0000m;
 }
+#endregion
+
+#region preenchimento de vetor IV
+// int[] Par = new int[5];
+// int[] Impar = new int[5];
+// int indP = 0, indI = 0;
+
+// for(int i = 0; i < 15; i++)
+// {
+//     int n = int.Parse(Console.ReadLine());
+
+//     if(n % 2 == 0)
+//     {
+//         Par[indP] = n;
+//         indP++;
+//         if(indP > 4)
+//         {
+//             for(int x = 0; x < 5; x++)
+//             {
+//                 Console.WriteLine($"par[{x}] = {Par[x]}");
+//             }
+//             Array.Clear(Par, 0, Par.Length);
+//             indP = 0;
+//         }
+//         continue;
+//     }
+
+//     if(n % 2 != 0)
+//     {
+//         Impar[indI] = n;
+//         indI++;
+//         if(indI > 4)
+//         {
+//             for(int x = 0; x < 5; x++)
+//             {
+//                 Console.WriteLine($"impar[{x}] = {Impar[x]}");
+//             }
+//             Array.Clear(Impar, 0, Par.Length);
+//             indI = 0;
+//         }
+//     }
+    
+// }
+// for(int y = 0; y < Impar.Length; y++)
+// {
+//     if(Impar[y] == 0)
+//         continue;
+//     Console.WriteLine($"impar[{y}] = {Impar[y]}");
+// }
+// for(int y = 0; y < Par.Length; y++)
+// {
+//     if(Par[y] == 0)
+//         continue;
+//     Console.WriteLine($"par[{y}] = {Par[y]}");
+// }
+#endregion
+
+#region menor e posição
+// int n = int.Parse(Console.ReadLine()), menor = 0, posicao = 0;
+// int[] x = new int[n];
+// string[] line = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries);
+
+// x = Array.ConvertAll(line, int.Parse);
+// menor = x[0];
+
+// for(int i = 0; i < x.Length; i++)
+// {
+//     if(x[i] < menor)
+//     {
+//         menor = x[i];
+//         posicao = i;
+//     }
+// }
+// Console.WriteLine($"Menor valor: {menor}\nPosicao: {posicao}");
+#endregion
+
+#region linha na matriz🌟
+// double[,] M = new double[12,12];
+// int L = int.Parse(Console.ReadLine());
+// double soma = 0;
+// char T = char.Parse(Console.ReadLine());
+
+// for(int l = 0; l < 12; l++)
+// {
+//     for(int c = 0; c < 12; c++)
+//     {
+//         M[l,c] = double.Parse(Console.ReadLine());
+//     }
+// }
+
+// switch (T)
+// {
+//     case 'S': for(int c = 0; c < 12; c++){ soma += M[L,c]; } Console.WriteLine($"{soma:F1}"); break;
+//     case 'M': for(int c = 0; c < 12; c++){ soma += M[L,c]; } Console.WriteLine($"{soma / 12:F1}"); break;
+//     default: break;
+// }
 #endregion
