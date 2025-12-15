@@ -1,1 +1,1 @@
-public record Transacao(decimal quantia, DateTime Date, string descricao);
+public record Transacao(decimal quantia, DateTime data, string descricao);
