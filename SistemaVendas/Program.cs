@@ -1,10 +1,12 @@
-﻿// See https://aka.ms/new-console-template for more information
-using SistemaVendas.Menus;
-class Program
-{
-    static void Main()
-    {
-        MenuPrincipal.Exibir();
-    } 
-}
+﻿using SistemaVendas.Menus;
+using SistemaVendas.Configuracao;
 
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        using var container = new Container();
+        
+        MenuPrincipal.Exibir(container);
+    }
+}

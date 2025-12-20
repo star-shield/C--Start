@@ -1,6 +1,6 @@
 using SistemaVendas.Entidades;
-using SistemaVendas.Repositorios.Interfaces;
 using SistemaVendas.Servicos.Interfaces;
+using SistemaVendas.Repositorios.Interfaces;
 
 namespace SistemaVendas.Servicos;
 
@@ -13,20 +13,20 @@ public class ProdutoServico : IProdutoServico
         _repositorio = repositorio;
     }
 
-    public void CriarProduto(string nome, decimal preco, int estoque)
+    public void CadastrarProduto(string nome, string precoTexto, string estoqueTexto)
     {
         if (string.IsNullOrWhiteSpace(nome))
             throw new Exception("Nome do produto é obrigatório.");
 
-        if (preco <= 0)
-            throw new Exception("Preço deve ser maior que zero.");
+        if (!decimal.TryParse(precoTexto, out var preco) || preco <= 0)
+            throw new Exception("Preço inválido.");
 
-        if (estoque < 0)
-            throw new Exception("Estoque não pode ser negativo.");
+        if (!int.TryParse(estoqueTexto, out var estoque) || estoque < 0)
+            throw new Exception("Estoque inválido.");
 
         var produto = new Produto
         {
-            Nome = nome,
+            Nome = nome.Trim(),
             Preco = preco,
             Estoque = estoque
         };
@@ -34,8 +34,27 @@ public class ProdutoServico : IProdutoServico
         _repositorio.Criar(produto);
     }
 
+    public Produto? BuscarPorId(int id)
+    {
+        return _repositorio.BuscarPorId(id);
+    }
+
     public List<Produto> ListarProdutos()
     {
         return _repositorio.Listar();
+    }
+
+    public void AtualizarEstoque(int produtoId, int quantidadeReduzir)
+    {
+        var produto = _repositorio.BuscarPorId(produtoId);
+        
+        if (produto == null)
+            throw new Exception("Produto não encontrado.");
+
+        if (produto.Estoque < quantidadeReduzir)
+            throw new Exception("Estoque insuficiente.");
+
+        produto.Estoque -= quantidadeReduzir;
+        _repositorio.Atualizar(produto);
     }
 }

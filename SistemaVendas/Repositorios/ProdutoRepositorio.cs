@@ -19,6 +19,12 @@ public class ProdutoRepositorio : IProdutoRepositorio
         _context.SaveChanges();
     }
 
+    public Produto? BuscarPorId(int id)
+    {
+        return _context.Produtos
+            .FirstOrDefault(p => p.Id == id && !p.Deletado);
+    }
+
     public List<Produto> Listar()
     {
         return _context.Produtos
@@ -26,8 +32,9 @@ public class ProdutoRepositorio : IProdutoRepositorio
             .ToList();
     }
 
-    public Produto? BuscarPorId(int id)
+    public void Atualizar(Produto produto)
     {
-        return _context.Produtos.FirstOrDefault(p => p.Id == id && !p.Deletado);
+        _context.Produtos.Update(produto);
+        _context.SaveChanges();
     }
 }

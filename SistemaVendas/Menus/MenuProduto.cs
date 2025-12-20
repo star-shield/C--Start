@@ -1,83 +1,93 @@
+using SistemaVendas.Configuracao;
 using SistemaVendas.Menus;
-using SistemaVendas.Repositorios;
-using SistemaVendas.Servicos;
-using SistemaVendas.BancoConfig;
-using SistemaVendas.Entidades;
 
 namespace SistemaVendas.Menus;
+
 public static class MenuProduto
 {
-    public static void Exibir()
+    public static void Exibir(Container container)
     {
-        Console.Clear();
-        Console.WriteLine("\n-----Menu de Produtos-----\n");
-        Console.WriteLine("[1] - Criar Produto");
-        Console.WriteLine("[2] - Lista de Produtos");
-        Console.WriteLine("[0] - Voltar");
-        Console.Write("Digite a opção: ");
-
-        var opcao = Console.ReadLine()!;
-
-        var context = new SistemaVendasContext();
-        var repositorio = new ProdutoRepositorio(context);
-        var servico = new ProdutoServico(repositorio);
-
-        switch (opcao)
+        bool continuar = true;
+        
+        while (continuar)
         {
-            case "1": CriarProduto(servico);  break;
-            case "2": ListarProdutos(servico);  break;
-            case "0": Console.Clear(); MenuPrincipal.Exibir(); return;
-        }
-        Console.ReadKey();
-        Console.Clear();
-        Exibir();
-    }
-    private static void CriarProduto(ProdutoServico servico)
-    {
-        while (true)
-        {
-            try
-            {
-                Console.Clear();
-                Console.WriteLine("-----Criar Produto-----\n");
+            Console.Clear();
+            Console.WriteLine("--- Menu Produto ---");
+            Console.WriteLine("1. Criar Produto");
+            Console.WriteLine("2. Listar Produtos");
+            Console.WriteLine("0. Voltar ao Menu Principal");
+            Console.Write("Escolha uma opção: ");  
+            string opcao = Console.ReadLine();
 
-                Console.Write("Digite o nome do produto: ");
-                string nome = Console.ReadLine();
-                Console.Write("Digite o preço do produto: ");
-                decimal preco = decimal.Parse(Console.ReadLine()!);
-                Console.Write("Digite a quantidade de estoque do produto: ");
-                int estoque = int.Parse(Console.ReadLine()!);
-
-                servico.CriarProduto(nome, preco, estoque);
-                Console.WriteLine("Produto cadastrado com sucesso✅");
-                Thread.Sleep(2000);
-                Exibir();
-                break;
-            }
-            catch
+            switch (opcao)
             {
-                Console.Write("*Erro em criar produto, clique qualquer tecla para tentar novamente*");
-                Console.ReadKey();
+                case "1":
+                    CadastrarProduto(container);
+                    break;
+                case "2":
+                    ListarProdutos(container);
+                    break;
+                case "0":
+                    continuar = false;
+                    break;
+                default:
+                    Console.WriteLine("Opção inválida. Tente novamente.");
+                    Thread.Sleep(1500);
+                    break;
             }
         }
     }
-    private static void ListarProdutos(ProdutoServico servico)
+    private static void CadastrarProduto(Container container)
     {
-        Console.Clear();
-        Console.WriteLine("-----Listar Produtos-----");
-        List<Produto> listaDeProduto = servico.ListarProdutos();
-        if (!listaDeProduto.Any())
+        try
         {
-            Console.Write("A lista está vazia");
+            Console.Clear();
+            Console.WriteLine("=== CADASTRO DE PRODUTO ===");
+
+            Console.Write("Nome do Produto: ");
+            var nome = Console.ReadLine()!;
+
+            Console.Write("Preço: ");
+            var preco = Console.ReadLine()!;
+
+            Console.Write("Estoque: ");
+            var estoque = Console.ReadLine()!;
+
+            container.ProdutoServico.CadastrarProduto(nome, preco, estoque);
+
+            Console.WriteLine("Produto cadastrado com sucesso!");
             Thread.Sleep(2000);
-            Exibir();
         }
-        foreach(var produto in listaDeProduto)
+        catch (Exception ex)
         {
-            Console.WriteLine($"| ID: {produto.Id} | Nome: {produto.Nome} | Preço: {produto.Preco:F2} | Estoque: {produto.Estoque}");
+            Console.WriteLine($"Erro: {ex.Message}");
+            Console.WriteLine("\nPressione qualquer tecla para continuar...");
+            Console.ReadKey();
         }
-        Console.Write("*Clique qualquer tecla para voltar ao menu*");
+    }
+
+    private static void ListarProdutos(Container container)
+    {
+        Console.Clear();
+        Console.WriteLine("=== LISTA DE PRODUTOS ===");
+
+        var produtos = container.ProdutoServico.ListarProdutos();
+
+        if (!produtos.Any())
+        {
+            Console.WriteLine("Nenhum produto cadastrado.");
+        }
+        else
+        {
+            foreach (var produto in produtos)
+            {
+                Console.WriteLine(
+                    $"ID: {produto.Id} | {produto.Nome} | R$ {produto.Preco:F2} | Estoque: {produto.Estoque}"
+                );
+            }
+        }
+
+        Console.WriteLine("\nPressione qualquer tecla para continuar...");
         Console.ReadKey();
-        Exibir();
     }
 }
